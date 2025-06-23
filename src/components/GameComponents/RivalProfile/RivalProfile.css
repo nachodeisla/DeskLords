@@ -1,0 +1,195 @@
+.rival-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  z-index: 5;
+}
+
+.rival-with-deck {
+  display: flex;
+  align-items: flex-start; 
+  gap: 1rem;
+}
+
+.rival-profile-card {
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.rival-avatar-wrapper {
+  position: relative;
+}
+
+.rival-avatar-image {
+  width: 150px !important;
+  height: 150px !important;
+  margin-bottom: 8px;
+}
+
+.rival-life-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.84) 30%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.rival-life-text {
+  color: red !important;
+  font-weight: bold !important;
+  font-size: 3rem !important;
+}
+
+.rival-profile-name {
+  color: red !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+
+.rival-deck-preview {
+  position: relative;
+  width: 130px;
+  height: 180px;
+}
+
+.rival-deck-preview {
+    position: relative;
+  width: 130px;
+  height: 180px;
+}
+
+.rival-deck-card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
+.rival-deck-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #83838365;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 10px 25px;
+  font-size: 3rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.rival-mana-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.rival-mana-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rival-mana-count {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgb(251, 255, 0);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 435px) {
+  .rival-container {
+    position: fixed;
+    top: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 10;
+      min-width: 65%;
+    width: auto;
+  }
+
+  .rival-with-deck {
+     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    padding: 0px 8px;
+        background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+
+  .rival-profile-card {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    gap: 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+  }
+
+  .rival-avatar-image {
+   width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 0;
+  }
+
+  .rival-life-text {
+    font-size: 1.5rem !important;
+  }
+
+  .rival-profile-name {
+    font-size: 0.9rem !important;
+  }
+
+  .rival-mana-wrapper {
+    width: 26px;
+    height: 26px;
+  }
+
+  .rival-mana-count {
+    font-size: 0.9rem;
+  }
+
+ .rivaldeck-card-image{
+    width: auto;
+  }
+
+   .rival-deck-preview {
+    width: 45px;
+    height: 63px;
+  }
+
+  .rival-deck-count {
+    font-size: 1.2rem;
+    padding: 4px 8px;
+  }
+}

@@ -1,0 +1,95 @@
+.see-social-container {
+  max-width: 600px;
+  margin: 3.5vh auto;
+  padding: 2rem;
+  background-color: #1e1e1e7c;
+  border: 1px solid #9c9c9c67;
+  color: #f0f0f0;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.see-social-container h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.see-social-info {
+  margin-bottom: 1rem;
+}
+
+.see-social-info strong {
+  color: #ccc;
+}
+
+.see-social-textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  resize: vertical;
+  background-color: #2a2a2a8f;
+  border: 1px solid #a5a5a5;
+  color: #f0f0f0;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.see-social-button {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #8a821a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-social-button:hover {
+  background-color: #c9c611;
+  color: black;
+}
+
+
+@media (max-width: 435px) {
+  .see-social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+    padding-top: 0%;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    margin: 2rem;
+  }
+
+  .see-social-container h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .see-social-info {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .see-social-textarea {
+    margin-top: 0%;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .see-social-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+}

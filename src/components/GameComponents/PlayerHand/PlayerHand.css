@@ -1,0 +1,160 @@
+.player-offset--3 { left: calc(50% - 330px); bottom: 0px;  --rotate: -15deg; }
+.player-offset--2 { left: calc(50% - 220px); bottom: 8px;  --rotate: -10deg; }
+.player-offset--1 { left: calc(50% - 110px); bottom: 16px; --rotate: -5deg; }
+.player-offset-0  { left: calc(50%);         bottom: 24px; --rotate: 0deg; }
+.player-offset-1  { left: calc(50% + 110px); bottom: 16px; --rotate: 5deg; }
+.player-offset-2  { left: calc(50% + 220px); bottom: 8px;  --rotate: 10deg; }
+.player-offset-3  { left: calc(50% + 330px); bottom: 0px;  --rotate: 15deg; }
+
+.player-hand {
+  position: fixed;
+  bottom: -10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 250px;
+  display: block;
+  z-index: 10;
+}
+
+.card-container {
+  position: absolute;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.card-container:hover {
+  z-index: 1000;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  transform: rotate(var(--rotate, 0deg));
+}
+
+.card.hovered {
+  transition: 0.5s;
+  transform: translateY(-80px) rotate(var(--rotate, 0deg)) scale(2.3);
+  border: 2px solid blue;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.selectedToUse{
+  border: 2px solid blue;
+  transform: translateY(-45px) rotate(var(--rotate));
+  scale: 1.1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 99999;
+}
+
+
+.floating-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.floating-overlay.fade-out {
+  opacity: 0;
+}
+
+.floating-message {
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgba(53, 53, 53, 0.938);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 435px) {
+  .player-hand {
+    height: 180px;
+  bottom: -7vh;
+  }
+
+  .card {
+    
+    width: 80px;
+    height: 120px;
+  }
+
+.card.hovered {
+  transform: rotate(var(--rotate, 0deg));
+  border: 2px solid blue;
+}
+
+
+  .selectedToUse {
+    border: 2px solid blue;
+    transform: rotate(var(--rotate, 0deg));
+  }
+
+
+@keyframes playerHandMoveToCenter {
+  from {
+    transform: translateY(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 1;
+  }
+}
+
+  .long-pressed-container {
+    position: fixed !important;
+    top: -53% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 9999 !important;
+    pointer-events: none;
+  }
+
+  .card.long-pressed {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    z-index: 10000;
+    border-radius: 6px;
+    pointer-events: none;
+    animation: playerHandMoveToCenter 0.4s ease forwards;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+.card.hover {
+  transform: none;
+  border: 0px;
+}
+
+
+  .player-offset--3 { left: calc(50% - 240px); bottom: 0px;  --rotate: -10deg; }
+  .player-offset--2 { left: calc(50% - 160px); bottom: 6px;  --rotate: -6deg;  }
+  .player-offset--1 { left: calc(50% - 80px);  bottom: 12px; --rotate: -3deg;  }
+  .player-offset-0  { left: 50%;              bottom: 18px; --rotate: 0deg;   }
+  .player-offset-1  { left: calc(50% + 80px);  bottom: 12px; --rotate: 3deg;  }
+  .player-offset-2  { left: calc(50% + 160px); bottom: 6px;  --rotate: 6deg;  }
+  .player-offset-3  { left: calc(50% + 240px); bottom: 0px;  --rotate: 10deg; }
+}
+

@@ -1,0 +1,173 @@
+.admin-scope {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+}
+
+.admin-scope h1, 
+.admin-scope h2, 
+.admin-scope h3 {
+  color: #ffffff;
+}
+
+.admin-scope button {
+  padding: 8px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3a3f5c;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-scope button:hover {
+  background-color: #5a5f7a;
+}
+
+.admin-scope button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.admin-scope table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2b2b3d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.admin-scope table thead {
+  background-color: #3a3f5c;
+  color: white;
+}
+
+.admin-scope table th,
+.admin-scope table td {
+  padding: 12px;
+  border: 1px solid #444;
+  text-align: left;
+  color: #e0e0e0;
+}
+
+.admin-scope form {
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b3d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 600px;
+}
+
+.admin-scope form label {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.admin-scope form input,
+.admin-scope form select,
+.admin-scope form textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #1f1f2e;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.admin-scope form input:focus,
+.admin-scope form select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #262637;
+}
+
+.admin-scope .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-scope .modal-overlay form {
+  background: #2b2b3d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.admin-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 90vw;
+  margin: 0 auto;
+  background-color: #1e1e2f;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.admin-toolbar-fixed {
+  position: sticky;
+  top: 0;
+  background-color: #1e1e2f;
+  padding: 20px;
+  border-bottom: 1px solid #444;
+  z-index: 100;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+
+.admin-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.admin-content-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #2b2b3d;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.table-scroll-wrapper {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* Scroll personalizado */
+.admin-scope * {
+  scrollbar-width: thin;
+  scrollbar-color: #666 #1e1e2f;
+}
+
+.admin-scope *::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.admin-scope *::-webkit-scrollbar-track {
+  background: #1e1e2f;
+}
+
+.admin-scope *::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 4px;
+}
